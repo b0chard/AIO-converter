@@ -64,27 +64,27 @@ void tempConverter(){
   switch(choice){
     case 1:
       result = (((float) 9 / 5) * value) + 32;
-      printf("%.2f°C is %.2f°F", value, result);
+      printf("%.2f °C is %.2f °F", value, result);
       break;
     case 2:
       result = value + 273.15;
-      printf("%.2f°C is %.2f°K", value, result);
+      printf("%.2f °C is %.2f °K", value, result);
       break;
     case 3:
       result = (value - 32) * ((float) 5 / 9);
-      printf("%.2f°F is %.2f°C", value, result);
+      printf("%.2f °F is %.2f °C", value, result);
       break;
     case 4:
       result = (value + 459.67) * ((float) 5 / 9);
-      printf("%.2f°F is %.2f°K", value, result);
+      printf("%.2f °F is %.2f °K", value, result);
       break;
     case 5:
       result = value - 273.15;
-      printf("%.2f°K is %.2f°C", value, result);
+      printf("%.2f °K is %.2f °C", value, result);
       break;
     case 6:
       result = (value * ((float) 9 / 5)) - 459.67;
-      printf("%.2f°K is %.2f°F", value, result);
+      printf("%.2f °K is %.2f °F", value, result);
       break;
     default:
       printf("Oops...invalid option: '%d'", choice);
@@ -158,5 +158,30 @@ void currConverter(){
 }
 
 void massConverter(){
+	int choice;
+  float value;
+  float result;
 
+  printf("%.*s", 10, "-----------------");
+  printf(" Welcome to the Mass Converter! ");
+  printf("%.*s", 10, "-----------------");
+  printf("\nChoose one from the list:\n");
+  printf("(1)Gram to Pound\t(2)Pound to Gram\n");
+  scanf(" %d", &choice);
+  printf("Enter a value: ");
+  scanf("%f", &value);
+
+  switch(choice){
+    case 1:
+      result = value * 0.0022046226;
+      printf("%.2f g is %.2f lbs", value, result);
+      break;
+    case 2:
+      result = value * 453.59237;
+      printf("%.2f lbs is %.2f g", value, result);
+      break;
+    default:
+      printf("Oops...invalid option: '%d'", choice);
+      printf("\nTry again.");
+  }
 }
