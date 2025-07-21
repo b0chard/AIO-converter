@@ -98,7 +98,7 @@ void currConverter(){
   float result;
 
   const float listOfConversions[] = {
-    // as of Jul 20, 2025 17:01:20 from openexchangesrates.org
+    // as of Jul 20, 2025 17:01:20 from openexchangerates.org
     57.110003, //usd to php
     1.53705, //usd to aud
     148.81007759, //usd to jpy
